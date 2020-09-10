@@ -2,6 +2,8 @@ String name;
 int age;
 boolean happy;
 
+String output;
+
 int i;
 
 color red = color(255, 0, 0);
@@ -14,6 +16,8 @@ int light = 0;
 
 void setup(){
   size(800, 800);
+  name = "AlberKops";
+  age = 20;
   println("Hi, my name is "+name);
   println("I am "+age+" years old");
   if(happy){
@@ -21,6 +25,9 @@ void setup(){
   }else{
     println("I dont clap my hands");
   }
+  
+  MethodOne();
+  MethodTwo();
 }
 
 void draw(){
@@ -76,4 +83,17 @@ void keyPressed(){
   }else if(key == 'e'){
     light = 2;
   }
+}
+
+void MethodOne(){
+  int i = 1000;
+  int max = 10;
+  if(i > max){
+    output = "i is greater than "+max+".";
+  }
+  println(output);
+}
+
+void MethodTwo(){
+  
 }
