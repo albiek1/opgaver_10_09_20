@@ -2,8 +2,6 @@ String name;
 int age;
 boolean happy;
 
-String output;
-
 int i;
 
 color red = color(255, 0, 0);
@@ -86,14 +84,35 @@ void keyPressed(){
 }
 
 void MethodOne(){
+  String output;
   int i = 1000;
   int max = 10;
   if(i > max){
     output = "i is greater than "+max+".";
+    println(output);
   }
-  println(output);
+  //println(output);
 }
 
 void MethodTwo(){
+  int weekday = 8;
+  int d = constrain(weekday, 0, 6);
+  boolean weekend = false;
+  String[] currDay = new String[7];
+  currDay[0] = "Monday";
+  currDay[1] = "Tuesday";
+  currDay[2] = "Wednesday";
+  currDay[3] = "Thursday";
+  currDay[4] = "Friday";
+  currDay[5] = "Saturday";
+  currDay[6] = "Sunday";
   
+  if(weekday < 5){
+    weekend = false;
+  }else{
+    weekend = true;
+  }
+  
+  println(currDay[d]);
+  println(weekend);
 }
