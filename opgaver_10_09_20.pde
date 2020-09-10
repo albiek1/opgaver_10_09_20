@@ -3,6 +3,8 @@ int age;
 boolean happy;
 
 int i;
+int a, b;
+int x, y, z;
 
 color red = color(255, 0, 0);
 color yellow = color(255, 255, 0);
@@ -26,6 +28,8 @@ void setup(){
   
   MethodOne();
   MethodTwo();
+  task6();
+  task7();
 }
 
 void draw(){
@@ -65,12 +69,12 @@ void draw(){
   }*/
   
   //while loop print even numbers 1-20
-  while(i <= 20){
+  /*while(i <= 20){
     if(i%2 == 0){
       println(i);
     }
     i++;
-  }
+  }*/
 }
 
 void keyPressed(){
@@ -115,4 +119,52 @@ void MethodTwo(){
   
   println(currDay[d]);
   println(weekend);
+}
+
+void task6(){
+  if(a == 10 || b == 10 || a + b == 10){
+    println("success");
+  }else{
+    println("failure");
+  }
+  
+  if(x + y + z == 30 && x != 10 && x != 20 && x != 30 && y != 10 && y != 20 && y != 30 && z != 10 && z != 20 && z != 30){
+    println("sucess");
+  }else{
+    println("falilure");
+  }
+}
+
+void task7(){
+  int integer = -20;
+  final int half = integer/2;
+  String s = "six";
+  String h = "HALF";
+  if(integer > 0){
+    while(integer >= 0){
+      if(integer == half){
+        println(h);
+        integer--;
+      }else if(integer == 6){
+        println(s);
+        integer--;
+      }else{
+        println(integer);
+        integer--;
+      }
+    }
+  }else{
+    while(integer <= 0){
+      if(integer == half){
+        println(h);
+        integer++;
+      }else if(integer == -6){
+        println(s);
+        integer++;
+      }else{
+        println(integer);
+        integer++;
+      }
+    }
+  }
 }
